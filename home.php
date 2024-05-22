@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+// Check if the user is not logged in, redirect to loginform.php
+if (!isset($_SESSION['username'])) {
+    header("Location: loginform.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
